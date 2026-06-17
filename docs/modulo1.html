@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"<strong>M&#xf3;dulo 1 &#x2013; Fundamentos de programaci&#xf3;n y entorno Java</strong>","children":[{"content":"&#x1f3af; 1. Primeros pasos en Java","children":[],"payload":{"tag":"h2","lines":"7,8"}},{"content":"&#x1f4cc; 2. Objetivos del m&#xf3;dulo","children":[{"content":"Comprender qu&#xe9; es un algoritmo y un programa","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"Instalar el JDK y un IDE","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"Conocer la estructura b&#xe1;sica de un programa Java","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"Usar <code>System.out.println</code> para mostrar informaci&#xf3;n","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"Declarar y usar variables con tipos primitivos","children":[],"payload":{"tag":"li","lines":"14,16"}}],"payload":{"tag":"h2","lines":"9,10"}},{"content":"&#x1f9e0; 3. &#xbf;Qu&#xe9; es un algoritmo?","children":[{"content":"Secuencia ordenada de pasos para resolver un problema","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"Ejemplo cotidiano: receta de cocina","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"Caracter&#xed;sticas: preciso, finito, definido","children":[],"payload":{"tag":"li","lines":"19,21"}}],"payload":{"tag":"h2","lines":"16,17"}},{"content":"&#x1f4dd; 4. Ejemplo de algoritmo en pseudoc&#xf3;digo","children":[{"content":"Problema: Calcular el &#xe1;rea de un rect&#xe1;ngulo","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"Pasos del algoritmo:","children":[{"content":"1. Inicio","children":[],"payload":{"tag":"li","lines":"24,25","listIndex":1}},{"content":"2. Leer base y altura","children":[],"payload":{"tag":"li","lines":"25,26","listIndex":2}},{"content":"3. Calcular &#xe1;rea = base &#xd7; altura","children":[],"payload":{"tag":"li","lines":"26,27","listIndex":3}},{"content":"4. Mostrar &#xe1;rea","children":[],"payload":{"tag":"li","lines":"27,28","listIndex":4}},{"content":"5. Fin","children":[],"payload":{"tag":"li","lines":"28,30","listIndex":5}}],"payload":{"tag":"li","lines":"23,30"}}],"payload":{"tag":"h2","lines":"21,22"}},{"content":"&#x1f4bb; 5. &#xbf;Qu&#xe9; es un programa?","children":[{"content":"Implementaci&#xf3;n de un algoritmo en un lenguaje de programaci&#xf3;n","children":[],"payload":{"tag":"li","lines":"31,32"}},{"content":"Lenguajes: Java, Python, C++","children":[],"payload":{"tag":"li","lines":"32,33"}},{"content":"Debe ser compilado o interpretado","children":[],"payload":{"tag":"li","lines":"33,35"}}],"payload":{"tag":"h2","lines":"30,31"}},{"content":"&#x2615; 6. Introducci&#xf3;n a Java","children":[{"content":"Creado por Sun Microsystems (1995), ahora Oracle","children":[],"payload":{"tag":"li","lines":"36,37"}},{"content":"Caracter&#xed;sticas:","children":[{"content":"Orientado a objetos","children":[],"payload":{"tag":"li","lines":"38,39"}},{"content":"Independiente de plataforma (JVM)","children":[],"payload":{"tag":"li","lines":"39,40"}},{"content":"Seguro y robusto","children":[],"payload":{"tag":"li","lines":"40,41"}},{"content":"Amplia comunidad y bibliotecas","children":[],"payload":{"tag":"li","lines":"41,43"}}],"payload":{"tag":"li","lines":"37,43"}}],"payload":{"tag":"h2","lines":"35,36"}},{"content":"&#x1f527; 7. Instalaci&#xf3;n del JDK","children":[{"content":"JDK = Java Development Kit","children":[],"payload":{"tag":"li","lines":"44,45"}},{"content":"Incluye: compilador (javac), JVM, bibliotecas","children":[],"payload":{"tag":"li","lines":"45,46"}},{"content":"Pasos de instalaci&#xf3;n:","children":[{"content":"Descargar de oracle.com o adoptium.net","children":[],"payload":{"tag":"li","lines":"47,48"}},{"content":"Ejecutar el instalador","children":[],"payload":{"tag":"li","lines":"48,49"}},{"content":"Configurar variable de entorno PATH","children":[],"payload":{"tag":"li","lines":"49,50"}}],"payload":{"tag":"li","lines":"46,50"}},{"content":"Verificar: <code>java -version</code>","children":[],"payload":{"tag":"li","lines":"50,52"}}],"payload":{"tag":"h2","lines":"43,44"}},{"content":"&#x1f6e0;&#xfe0f; 8. Instalaci&#xf3;n de un IDE","children":[{"content":"IDE = Entorno de Desarrollo Integrado","children":[],"payload":{"tag":"li","lines":"53,54"}},{"content":"Opciones recomendadas:","children":[{"content":"IntelliJ IDEA (Community)","children":[],"payload":{"tag":"li","lines":"55,56"}},{"content":"Eclipse","children":[],"payload":{"tag":"li","lines":"56,57"}},{"content":"NetBeans","children":[],"payload":{"tag":"li","lines":"57,58"}}],"payload":{"tag":"li","lines":"54,58"}},{"content":"Pasos: descargar, instalar, crear primer proyecto","children":[],"payload":{"tag":"li","lines":"58,60"}}],"payload":{"tag":"h2","lines":"52,53"}},{"content":"&#x1f3d7;&#xfe0f; 9. Estructura de un programa Java","children":[{"content":"C&#xf3;digo base: <code>public class MiPrograma { // C&#xf3;digo aqu&#xed; }</code>","children":[],"payload":{"tag":"li","lines":"61,62"}},{"content":"El nombre de la clase debe coincidir con el archivo (.java)","children":[],"payload":{"tag":"li","lines":"62,63"}},{"content":"Las llaves <code>{}</code> delimitan bloques de c&#xf3;digo","children":[],"payload":{"tag":"li","lines":"63,65"}}],"payload":{"tag":"h2","lines":"60,61"}},{"content":"&#x1f680; 10. El m&#xe9;todo main","children":[{"content":"C&#xf3;digo: <code>public static void main(String[] args) { // Punto de entrada }</code>","children":[],"payload":{"tag":"li","lines":"66,67"}},{"content":"Es obligatorio","children":[],"payload":{"tag":"li","lines":"67,68"}},{"content":"La JVM lo ejecuta al iniciar el programa","children":[],"payload":{"tag":"li","lines":"68,70"}}],"payload":{"tag":"h2","lines":"65,66"}},{"content":"&#x1f4e2; 11. Salida por consola","children":[{"content":"<code>System.out.println(&quot;Hola mundo&quot;);</code> &#x2192; Con salto de l&#xed;nea","children":[],"payload":{"tag":"li","lines":"71,72"}},{"content":"<code>System.out.print(&quot;Hola mundo&quot;);</code> &#x2192; Sin salto de l&#xed;nea","children":[],"payload":{"tag":"li","lines":"72,73"}},{"content":"<code>System</code> es una clase, <code>out</code> es un objeto de salida, <code>println</code> e <code>print</code> son m&#xe9;todos","children":[],"payload":{"tag":"li","lines":"73,75"}}],"payload":{"tag":"h2","lines":"70,71"}},{"content":"&#x1f4e6; 12. Variables &#x2013; concepto y sintaxis","children":[{"content":"Espacio en memoria que almacena un valor","children":[],"payload":{"tag":"li","lines":"76,77"}},{"content":"Sintaxis: <code>tipo nombre = valor;</code>","children":[],"payload":{"tag":"li","lines":"77,78"}},{"content":"Ejemplo: <code>int edad = 25;</code>","children":[],"payload":{"tag":"li","lines":"78,80"}}],"payload":{"tag":"h2","lines":"75,76"}},{"content":"&#x1f522; 13. Tipos primitivos","children":[{"content":"<code>int</code>: 32 bits &#x2192; <code>int num = 10;</code>","children":[],"payload":{"tag":"li","lines":"81,82"}},{"content":"<code>double</code>: 64 bits &#x2192; <code>double pi = 3.14;</code>","children":[],"payload":{"tag":"li","lines":"82,83"}},{"content":"<code>char</code>: 16 bits &#x2192; <code>char letra = &apos;A&apos;;</code>","children":[],"payload":{"tag":"li","lines":"83,84"}},{"content":"<code>boolean</code>: 1 bit &#x2192; <code>boolean ok = true;</code>","children":[],"payload":{"tag":"li","lines":"84,86"}}],"payload":{"tag":"h2","lines":"80,81"}},{"content":"&#x270d;&#xfe0f; 14. Declaraci&#xf3;n e inicializaci&#xf3;n","children":[{"content":"<code>int edad;</code> &#x2192; Declaraci&#xf3;n","children":[],"payload":{"tag":"li","lines":"87,88"}},{"content":"<code>edad = 30;</code> &#x2192; Inicializaci&#xf3;n","children":[],"payload":{"tag":"li","lines":"88,89"}},{"content":"<code>double altura = 1.75;</code> &#x2192; Declaraci&#xf3;n + inicializaci&#xf3;n","children":[],"payload":{"tag":"li","lines":"89,90"}},{"content":"<code>char inicial = &apos;J&apos;;</code>","children":[],"payload":{"tag":"li","lines":"90,91"}},{"content":"<code>boolean activo = false;</code>","children":[],"payload":{"tag":"li","lines":"91,93"}}],"payload":{"tag":"h2","lines":"86,87"}},{"content":"&#x1f4c4; 15. Ejemplo completo de programa b&#xe1;sico","children":[{"content":"\n<pre data-lines=\"94,106\"><code data-lines=\"94,106\"><span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">MiPrograma</span> { \n  <span class=\"hljs-function\"><span class=\"hljs-keyword\">public</span> <span class=\"hljs-keyword\">static</span> <span class=\"hljs-keyword\">void</span> <span class=\"hljs-title\">main</span>(<span class=\"hljs-params\">String[] <span class=\"hljs-keyword\">args</span></span>)</span> { \n      String nombre = <span class=\"hljs-string\">&quot;Ana&quot;</span>; \n      <span class=\"hljs-built_in\">int</span> edad = <span class=\"hljs-number\">22</span>; \n      <span class=\"hljs-built_in\">double</span> estatura = <span class=\"hljs-number\">1.65</span>; \n      System.<span class=\"hljs-keyword\">out</span>.println(<span class=\"hljs-string\">&quot;Nombre: &quot;</span> + nombre); \n      System.<span class=\"hljs-keyword\">out</span>.println(<span class=\"hljs-string\">&quot;Edad: &quot;</span> + edad); \n      System.<span class=\"hljs-keyword\">out</span>.println(<span class=\"hljs-string\">&quot;Estatura: &quot;</span> + estatura); \n      } \n  }\n\n</code></pre>","children":[],"payload":{"tag":"li","lines":"94,106"}}],"payload":{"tag":"h2","lines":"93,94"}},{"content":"16. Resumen del m&#xf3;dulo","children":[{"content":"Algoritmo: secuencia de pasos para resolver un problema","children":[],"payload":{"tag":"li","lines":"107,108"}},{"content":"Programa: implementaci&#xf3;n de un algoritmo en un lenguaje","children":[],"payload":{"tag":"li","lines":"108,109"}},{"content":"JDK: kit de desarrollo de Java","children":[],"payload":{"tag":"li","lines":"109,110"}},{"content":"IDE: entorno integrado (IntelliJ, Eclipse, NetBeans)","children":[],"payload":{"tag":"li","lines":"110,111"}},{"content":"Estructura b&#xe1;sica: clase + m&#xe9;todo main + llaves","children":[],"payload":{"tag":"li","lines":"111,112"}},{"content":"Salida: <code>System.out.println()</code> y <code>System.out.print()</code>","children":[],"payload":{"tag":"li","lines":"112,113"}},{"content":"Tipos primitivos: int, double, char, boolean","children":[],"payload":{"tag":"li","lines":"113,114"}},{"content":"Variables: espacio en memoria que almacena un valor","children":[],"payload":{"tag":"li","lines":"114,116"}}],"payload":{"tag":"h2","lines":"106,107"}},{"content":"17. Actividad pr&#xe1;ctica","children":[{"content":"Enunciado: Crear un programa que declare variables con tu edad, altura y letra inicial","children":[],"payload":{"tag":"li","lines":"117,118"}},{"content":"Tipos a usar: <code>int</code> para edad, <code>double</code> para altura, <code>char</code> para inicial","children":[],"payload":{"tag":"li","lines":"118,119"}},{"content":"Mostrar: cada valor por consola usando <code>System.out.println</code>","children":[],"payload":{"tag":"li","lines":"119,120"}},{"content":"Ejecutar: probar en el IDE","children":[],"payload":{"tag":"li","lines":"120,121"}},{"content":"Ejemplo de salida: <code>Edad: 25</code>, <code>Altura: 1.75</code>, <code>Inicial: J</code>","children":[],"payload":{"tag":"li","lines":"121,122"}},{"content":"Ampliaci&#xf3;n opcional: agregar nombre completo con <code>String</code> y mensaje personalizado","children":[],"payload":{"tag":"li","lines":"122,123"}}],"payload":{"tag":"h2","lines":"116,117"}}],"payload":{"tag":"h1","lines":"5,6"}},{"initialExpandLevel":1})</script>
+<a class="course-home-link" href="./index.html" aria-label="Volver al inicio">Inicio</a>
+<style>
+.course-home-link {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  text-decoration: none;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f8fafc;
+  background: rgba(15, 76, 92, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(3px);
+}
+.course-home-link:hover {
+  background: rgba(187, 62, 3, 0.95);
+}
+.course-home-link:focus-visible {
+  outline: 3px solid #ffcb77;
+  outline-offset: 2px;
+}
+</style>
+</body>
+</html>
